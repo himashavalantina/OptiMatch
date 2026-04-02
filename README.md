@@ -123,6 +123,9 @@ Go to:
 ```
 http://127.0.0.1:5000
 ```
+<img width="1918" height="990" alt="image" src="https://github.com/user-attachments/assets/60d3176a-2a42-497a-adac-5336ed11bbd8" />
+
+<img width="1911" height="989" alt="image" src="https://github.com/user-attachments/assets/7b729253-f254-4897-8d93-0723b5685c9a" />
 
 ---
 
