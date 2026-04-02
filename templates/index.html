@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptiMatch AI | Advanced Career Companion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    
+    <main class="container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-rocket"></i>
+                <h1>OptiMatch <span>AI</span></h1>
+            </div>
+            <p class="subtitle">Upload your CV to discover jobs and courses meticulously matched to your skills using AI.</p>
+        </header>
+
+        <section class="upload-section glass-panel">
+            <form id="matchForm">
+                <div class="form-group cv-upload" id="dropZone">
+                    <input type="file" id="cvInput" name="cv" accept=".pdf" required hidden>
+                    <div class="upload-prompt">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Upload Your CV</h3>
+                        <p>Drag and drop your PDF file here, or click to browse</p>
+                        <span class="file-name" id="fileName"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country"><i class="fa-solid fa-earth-americas"></i> Preferred Country</label>
+                        <input type="text" id="country" name="country" placeholder="e.g. United States, Remote, UK...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="matchType"><i class="fa-solid fa-bullseye"></i> I am looking for</label>
+                        <select id="matchType" name="type">
+                            <option value="both">Jobs & Courses</option>
+                            <option value="jobs">Only Jobs</option>
+                            <option value="courses">Only Courses</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="generate-btn" id="submitBtn">
+                    <span>Find My Matches</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+            </form>
+        </section>
+
+        <!-- Loader -->
+        <div id="loader" class="loader-container hidden">
+            <div class="spinner"></div>
+            <p>OptiMatch AI is analyzing your CV...</p>
+        </div>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="results-container hidden">
+            
+            <div id="jobsColumn" class="results-col hidden">
+                <div class="section-title">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h2>Top Job Matches</h2>
+                </div>
+                <div class="list-container" id="jobsList">
+                    <!-- Jobs will be generated here -->
+                </div>
+            </div>
+
+            <div id="coursesColumn" class="results-col hidden">
+                <div class="section-title">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h2>Recommended Courses</h2>
+                </div>
+                <div class="list-container" id="coursesList">
+                    <!-- Courses will be generated here -->
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
