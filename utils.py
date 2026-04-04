@@ -17,7 +17,7 @@ def extract_text_from_pdf(pdf_path):
 
 def fetch_jooble_jobs(skills, api_key, location=""):
     """Fetches live jobs from Jooble API using a POST request."""
-    url = f"https://jooble.org/api/2d506b3a-2fdb-4f12-a3a4-a47937a0a87d"
+    url = f"https://jooble.org/api/{api_key}"
     body = {
         "keywords": skills,
         "location": location
