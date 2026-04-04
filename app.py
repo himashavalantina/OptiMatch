@@ -12,7 +12,7 @@ CORS(app)
 app.config['UPLOAD_FOLDER'] = 'resumes'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-JOOBLE_KEY = "2d506b3a-2fdb-4f12-a3a4-a47937a0a87d" 
+JOOBLE_KEY = {enter the key here} 
 
 def get_recommendations(resume_text, target_texts):
     if not target_texts:
